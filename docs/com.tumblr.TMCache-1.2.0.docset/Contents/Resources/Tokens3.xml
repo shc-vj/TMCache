@@ -7,6 +7,7 @@
 			<Abstract type="html">TMMemoryCache is a fast, thread safe key/value store similar to NSCache. On iOS it will clear itself
 automatically to reduce memory usage when the app receives a memory warning or goes into the background.</Abstract>
 			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+            
 			
 			<NodeRef refid="3"/>
 		</Token>
@@ -16,68 +17,111 @@ automatically to reduce memory usage when the app receives a memory warning or g
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setQueue:</TokenIdentifier>
 			<Abstract type="html">A concurrent queue on which all work is done. It is exposed here so that it can be set to target some
 other queue, such as a global concurrent queue with a priority other than the default.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
 			
 			
 			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/queue</TokenIdentifier>
+			<Abstract type="html">A concurrent queue on which all work is done. It is exposed here so that it can be set to target some
+other queue, such as a global concurrent queue with a priority other than the default.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
+			
+			
+			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/queue</TokenIdentifier>
 			<Abstract type="html">A concurrent queue on which all work is done. It is exposed here so that it can be set to target some
 other queue, such as a global concurrent queue with a priority other than the default.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
 			
 			
 			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setTotalCost:</TokenIdentifier>
 			<Abstract type="html">The total accumulated cost.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSUInteger totalCost</Declaration>
 			
 			
 			<Anchor>//api/name/totalCost</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/totalCost</TokenIdentifier>
+			<Abstract type="html">The total accumulated cost.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSUInteger totalCost</Declaration>
+			
+			
+			<Anchor>//api/name/totalCost</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/totalCost</TokenIdentifier>
 			<Abstract type="html">The total accumulated cost.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSUInteger totalCost</Declaration>
 			
 			
 			<Anchor>//api/name/totalCost</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setCostLimit:</TokenIdentifier>
 			<Abstract type="html">The maximum cost allowed to accumulate before objects begin to be removed with trimToCostByDate:.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) NSUInteger costLimit</Declaration>
 			
 			
 			<Anchor>//api/name/costLimit</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/costLimit</TokenIdentifier>
+			<Abstract type="html">The maximum cost allowed to accumulate before objects begin to be removed with trimToCostByDate:.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) NSUInteger costLimit</Declaration>
+			
+			
+			<Anchor>//api/name/costLimit</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/costLimit</TokenIdentifier>
 			<Abstract type="html">The maximum cost allowed to accumulate before objects begin to be removed with trimToCostByDate:.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) NSUInteger costLimit</Declaration>
 			
 			
 			<Anchor>//api/name/costLimit</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -85,12 +129,27 @@ other queue, such as a global concurrent queue with a priority other than the de
 			<Abstract type="html">The maximum number of seconds an object is allowed to exist in the cache. Setting this to a value
 greater than 0.0 will start a recurring GCD timer with the same period that calls trimToDate:.
 Setting it back to 0.0 will stop the timer. Defaults to 0.0.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) NSTimeInterval ageLimit</Declaration>
 			
 			
 			<Anchor>//api/name/ageLimit</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/ageLimit</TokenIdentifier>
+			<Abstract type="html">The maximum number of seconds an object is allowed to exist in the cache. Setting this to a value
+greater than 0.0 will start a recurring GCD timer with the same period that calls trimToDate:.
+Setting it back to 0.0 will stop the timer. Defaults to 0.0.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) NSTimeInterval ageLimit</Declaration>
+			
+			
+			<Anchor>//api/name/ageLimit</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -98,270 +157,539 @@ Setting it back to 0.0 will stop the timer. Defaults to 0.0.</Abstract>
 			<Abstract type="html">The maximum number of seconds an object is allowed to exist in the cache. Setting this to a value
 greater than 0.0 will start a recurring GCD timer with the same period that calls trimToDate:.
 Setting it back to 0.0 will stop the timer. Defaults to 0.0.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) NSTimeInterval ageLimit</Declaration>
 			
 			
 			<Anchor>//api/name/ageLimit</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObjectsCount:</TokenIdentifier>
+			<Abstract type="html">The number of objects in the cache.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSUInteger objectsCount</Declaration>
+			
+			
+			<Anchor>//api/name/objectsCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/objectsCount</TokenIdentifier>
+			<Abstract type="html">The number of objects in the cache.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSUInteger objectsCount</Declaration>
+			
+			
+			<Anchor>//api/name/objectsCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/objectsCount</TokenIdentifier>
+			<Abstract type="html">The number of objects in the cache.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSUInteger objectsCount</Declaration>
+			
+			
+			<Anchor>//api/name/objectsCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setCountLimit:</TokenIdentifier>
+			<Abstract type="html">The maximum number of objects allowed in cache.
+This value is checked every time an object is set, if the written objects count
+size exceeds the limit a trim call is queued. Defaults to 0.0, meaning no practical limit.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) NSUInteger countLimit</Declaration>
+			
+			
+			<Anchor>//api/name/countLimit</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/countLimit</TokenIdentifier>
+			<Abstract type="html">The maximum number of objects allowed in cache.
+This value is checked every time an object is set, if the written objects count
+size exceeds the limit a trim call is queued. Defaults to 0.0, meaning no practical limit.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) NSUInteger countLimit</Declaration>
+			
+			
+			<Anchor>//api/name/countLimit</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/countLimit</TokenIdentifier>
+			<Abstract type="html">The maximum number of objects allowed in cache.
+This value is checked every time an object is set, if the written objects count
+size exceeds the limit a trim call is queued. Defaults to 0.0, meaning no practical limit.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) NSUInteger countLimit</Declaration>
+			
+			
+			<Anchor>//api/name/countLimit</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setRemoveAllObjectsOnMemoryWarning:</TokenIdentifier>
 			<Abstract type="html">When YES on iOS the cache will remove all objects when the app receives a memory warning.
 Defaults to YES.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) BOOL removeAllObjectsOnMemoryWarning</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjectsOnMemoryWarning</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeAllObjectsOnMemoryWarning</TokenIdentifier>
+			<Abstract type="html">When YES on iOS the cache will remove all objects when the app receives a memory warning.
+Defaults to YES.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL removeAllObjectsOnMemoryWarning</Declaration>
+			
+			
+			<Anchor>//api/name/removeAllObjectsOnMemoryWarning</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/removeAllObjectsOnMemoryWarning</TokenIdentifier>
 			<Abstract type="html">When YES on iOS the cache will remove all objects when the app receives a memory warning.
 Defaults to YES.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) BOOL removeAllObjectsOnMemoryWarning</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjectsOnMemoryWarning</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setRemoveAllObjectsOnEnteringBackground:</TokenIdentifier>
 			<Abstract type="html">When YES on iOS the cache will remove all objects when the app enters the background.
 Defaults to YES.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) BOOL removeAllObjectsOnEnteringBackground</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjectsOnEnteringBackground</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeAllObjectsOnEnteringBackground</TokenIdentifier>
+			<Abstract type="html">When YES on iOS the cache will remove all objects when the app enters the background.
+Defaults to YES.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL removeAllObjectsOnEnteringBackground</Declaration>
+			
+			
+			<Anchor>//api/name/removeAllObjectsOnEnteringBackground</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/removeAllObjectsOnEnteringBackground</TokenIdentifier>
 			<Abstract type="html">When YES on iOS the cache will remove all objects when the app enters the background.
 Defaults to YES.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (assign) BOOL removeAllObjectsOnEnteringBackground</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjectsOnEnteringBackground</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setUpdateObjectAccessDate:</TokenIdentifier>
+			<Abstract type="html">When YES the cache will set access time on objectForKey:block:
+Defaults to YES.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL updateObjectAccessDate</Declaration>
+			
+			
+			<Anchor>//api/name/updateObjectAccessDate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/updateObjectAccessDate</TokenIdentifier>
+			<Abstract type="html">When YES the cache will set access time on objectForKey:block:
+Defaults to YES.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL updateObjectAccessDate</Declaration>
+			
+			
+			<Anchor>//api/name/updateObjectAccessDate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/updateObjectAccessDate</TokenIdentifier>
+			<Abstract type="html">When YES the cache will set access time on objectForKey:block:
+Defaults to YES.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL updateObjectAccessDate</Declaration>
+			
+			
+			<Anchor>//api/name/updateObjectAccessDate</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setWillAddObjectBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before an object is added to the cache. This block will be excuted within
 a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock willAddObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/willAddObjectBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just before an object is added to the cache. This block will be excuted within
+a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheObjectBlock willAddObjectBlock</Declaration>
+			
+			
+			<Anchor>//api/name/willAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/willAddObjectBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before an object is added to the cache. This block will be excuted within
 a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock willAddObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setWillRemoveObjectBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before an object is removed from the cache. This block will be excuted
 within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock willRemoveObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/willRemoveObjectBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just before an object is removed from the cache. This block will be excuted
+within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheObjectBlock willRemoveObjectBlock</Declaration>
+			
+			
+			<Anchor>//api/name/willRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/willRemoveObjectBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before an object is removed from the cache. This block will be excuted
 within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock willRemoveObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setWillRemoveAllObjectsBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before all objects are removed from the cache as a result of removeAllObjects:.
 This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock willRemoveAllObjectsBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/willRemoveAllObjectsBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just before all objects are removed from the cache as a result of removeAllObjects:.
+This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheBlock willRemoveAllObjectsBlock</Declaration>
+			
+			
+			<Anchor>//api/name/willRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/willRemoveAllObjectsBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just before all objects are removed from the cache as a result of removeAllObjects:.
 This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock willRemoveAllObjectsBlock</Declaration>
 			
 			
 			<Anchor>//api/name/willRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setDidAddObjectBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after an object is added to the cache. This block will be excuted within
 a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock didAddObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/didAddObjectBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just after an object is added to the cache. This block will be excuted within
+a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheObjectBlock didAddObjectBlock</Declaration>
+			
+			
+			<Anchor>//api/name/didAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/didAddObjectBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after an object is added to the cache. This block will be excuted within
 a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock didAddObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didAddObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setDidRemoveObjectBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after an object is removed from the cache. This block will be excuted
 within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock didRemoveObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/didRemoveObjectBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just after an object is removed from the cache. This block will be excuted
+within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheObjectBlock didRemoveObjectBlock</Declaration>
+			
+			
+			<Anchor>//api/name/didRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/didRemoveObjectBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after an object is removed from the cache. This block will be excuted
 within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheObjectBlock didRemoveObjectBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didRemoveObjectBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setDidRemoveAllObjectsBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after all objects are removed from the cache as a result of removeAllObjects:.
 This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didRemoveAllObjectsBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/didRemoveAllObjectsBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed just after all objects are removed from the cache as a result of removeAllObjects:.
+This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheBlock didRemoveAllObjectsBlock</Declaration>
+			
+			
+			<Anchor>//api/name/didRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/didRemoveAllObjectsBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed just after all objects are removed from the cache as a result of removeAllObjects:.
 This block will be excuted within a barrier, i.e. all reads and writes are suspended for the duration of the block.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didRemoveAllObjectsBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didRemoveAllObjectsBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setDidReceiveMemoryWarningBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed upon receiving a memory warning (iOS only) potentially in parallel with other blocks on the queue.
 This block will be executed regardless of the value of removeAllObjectsOnMemoryWarning. Defaults to nil.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didReceiveMemoryWarningBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didReceiveMemoryWarningBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/didReceiveMemoryWarningBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed upon receiving a memory warning (iOS only) potentially in parallel with other blocks on the queue.
+This block will be executed regardless of the value of removeAllObjectsOnMemoryWarning. Defaults to nil.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheBlock didReceiveMemoryWarningBlock</Declaration>
+			
+			
+			<Anchor>//api/name/didReceiveMemoryWarningBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/didReceiveMemoryWarningBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed upon receiving a memory warning (iOS only) potentially in parallel with other blocks on the queue.
 This block will be executed regardless of the value of removeAllObjectsOnMemoryWarning. Defaults to nil.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didReceiveMemoryWarningBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didReceiveMemoryWarningBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setDidEnterBackgroundBlock:</TokenIdentifier>
 			<Abstract type="html">A block to be executed when the app enters the background (iOS only) potentially in parallel with other blocks on the queue.
 This block will be executed regardless of the value of removeAllObjectsOnEnteringBackground. Defaults to nil.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didEnterBackgroundBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didEnterBackgroundBlock</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/didEnterBackgroundBlock</TokenIdentifier>
+			<Abstract type="html">A block to be executed when the app enters the background (iOS only) potentially in parallel with other blocks on the queue.
+This block will be executed regardless of the value of removeAllObjectsOnEnteringBackground. Defaults to nil.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>@property (copy) TMMemoryCacheBlock didEnterBackgroundBlock</Declaration>
+			
+			
+			<Anchor>//api/name/didEnterBackgroundBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMMemoryCache/didEnterBackgroundBlock</TokenIdentifier>
 			<Abstract type="html">A block to be executed when the app enters the background (iOS only) potentially in parallel with other blocks on the queue.
 This block will be executed regardless of the value of removeAllObjectsOnEnteringBackground. Defaults to nil.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>@property (copy) TMMemoryCacheBlock didEnterBackgroundBlock</Declaration>
 			
 			
 			<Anchor>//api/name/didEnterBackgroundBlock</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/sharedCache</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/TMMemoryCache/sharedCache</TokenIdentifier>
 			<Abstract type="html">A shared cache.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)sharedCache</Declaration>
+			<Declaration>+ (instancetype)sharedCache</Declaration>
 			
 			<ReturnValue><Abstract type="html">The shared singleton cache instance.</Abstract></ReturnValue>
 			<Anchor>//api/name/sharedCache</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/objectForKey:block:</TokenIdentifier>
 			<Abstract type="html">Retrieves the object for the specified key. This method returns immediately and executes the passed
 block after the object is available, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)objectForKey:(NSString *)key block:(TMMemoryCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -375,13 +703,14 @@ block after the object is available, potentially in parallel with other blocks o
 			</Parameters>
 			
 			<Anchor>//api/name/objectForKey:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObject:forKey:block:</TokenIdentifier>
 			<Abstract type="html">Stores an object in the cache for the specified key. This method returns immediately and executes the
 passed block after the object has been stored, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)setObject:(id)object forKey:(NSString *)key block:(TMMemoryCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -398,6 +727,7 @@ passed block after the object has been stored, potentially in parallel with othe
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -406,7 +736,7 @@ passed block after the object has been stored, potentially in parallel with othe
 to go over the costLimit the cache is trimmed (oldest objects first). This method returns immediately
 and executes the passed block after the object has been stored, potentially in parallel with other blocks
 on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost block:(TMMemoryCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -426,13 +756,46 @@ on the queue.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:withCost:block:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObject:forKey:withCost:andDate:block:</TokenIdentifier>
+			<Abstract type="html">Stores an object in the cache for the specified key and the specified cost. If the cost causes the total
+to go over the costLimit the cache is trimmed (oldest objects first). This method returns immediately
+and executes the passed block after the object has been stored, potentially in parallel with other blocks
+on the queue.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate *)date block:(TMMemoryCacheObjectBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">An object to store in the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">A key to associate with the object. This string will be copied.</Abstract>
+				</Parameter><Parameter>
+					<Name>cost</Name>
+					<Abstract type="html">An amount to add to the totalCost.</Abstract>
+				</Parameter><Parameter>
+					<Name>date</Name>
+					<Abstract type="html">Access date to set on object</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block to be executed concurrently after the object has been stored, or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setObject:forKey:withCost:andDate:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeObjectForKey:block:</TokenIdentifier>
 			<Abstract type="html">Removes the object for the specified key. This method returns immediately and executes the passed
 block after the object has been removed, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeObjectForKey:(NSString *)key block:(TMMemoryCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -446,6 +809,7 @@ block after the object has been removed, potentially in parallel with other bloc
 			</Parameters>
 			
 			<Anchor>//api/name/removeObjectForKey:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -453,7 +817,7 @@ block after the object has been removed, potentially in parallel with other bloc
 			<Abstract type="html">Removes all objects from the cache that have not been used since the specified date.
 This method returns immediately and executes the passed block after the cache has been trimmed,
 potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToDate:(NSDate *)date block:(TMMemoryCacheBlock)block</Declaration>
 			<Parameters>
@@ -467,6 +831,7 @@ potentially in parallel with other blocks on the queue.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/trimToDate:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -474,7 +839,7 @@ potentially in parallel with other blocks on the queue.</Abstract>
 			<Abstract type="html">Removes objects from the cache, costliest objects first, until the totalCost is below the specified
 value. This method returns immediately and executes the passed block after the cache has been trimmed,
 potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToCost:(NSUInteger)cost block:(TMMemoryCacheBlock)block</Declaration>
 			<Parameters>
@@ -488,6 +853,7 @@ potentially in parallel with other blocks on the queue.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/trimToCost:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -495,7 +861,7 @@ potentially in parallel with other blocks on the queue.</Abstract>
 			<Abstract type="html">Removes objects from the cache, ordered by date (least recently used first), until the totalCost is below
 the specified value. This method returns immediately and executes the passed block after the cache has been
 trimmed, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToCostByDate:(NSUInteger)cost block:(TMMemoryCacheBlock)block</Declaration>
 			<Parameters>
@@ -509,13 +875,36 @@ trimmed, potentially in parallel with other blocks on the queue.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/trimToCostByDate:block:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/trimToCountByDate:block:</TokenIdentifier>
+			<Abstract type="html">Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+is equal to the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
+been trimmed.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>- (void)trimToCountByDate:(NSUInteger)objectsCount block:(TMMemoryCacheBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectsCount</Name>
+					<Abstract type="html">The cache will be trimmed equal to this size.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block to be executed serially after the cache has been trimmed, or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/trimToCountByDate:block:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeAllObjects:</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache. This method returns immediately and executes the passed block after
 the cache has been cleared, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeAllObjects:(TMMemoryCacheBlock)block</Declaration>
 			<Parameters>
@@ -526,13 +915,14 @@ the cache has been cleared, potentially in parallel with other blocks on the que
 			</Parameters>
 			
 			<Anchor>//api/name/removeAllObjects:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/enumerateObjectsWithBlock:completionBlock:</TokenIdentifier>
 			<Abstract type="html">Loops through all objects in the cache within a memory barrier (reads and writes are suspended during the enumeration).
 This method returns immediately.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)enumerateObjectsWithBlock:(TMMemoryCacheObjectBlock)block completionBlock:(TMMemoryCacheBlock)completionBlock</Declaration>
 			<Parameters>
@@ -546,13 +936,14 @@ This method returns immediately.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/enumerateObjectsWithBlock:completionBlock:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/objectForKey:</TokenIdentifier>
 			<Abstract type="html">Retrieves the object for the specified key. This method blocks the calling thread until the
 object is available.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 	<RelatedTokens>
 		<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/objectForKey:block:</TokenIdentifier>
@@ -568,13 +959,14 @@ object is available.</Abstract>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The object for the specified key.</Abstract></ReturnValue>
 			<Anchor>//api/name/objectForKey:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObject:forKey:</TokenIdentifier>
 			<Abstract type="html">Stores an object in the cache for the specified key. This method blocks the calling thread until the object
 has been set.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 	<RelatedTokens>
 		<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObject:forKey:block:</TokenIdentifier>
@@ -593,6 +985,7 @@ has been set.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
@@ -600,7 +993,7 @@ has been set.</Abstract>
 			<Abstract type="html">Stores an object in the cache for the specified key and the specified cost. If the cost causes the total
 to go over the costLimit the cache is trimmed (oldest objects first). This method blocks the calling thread
 until the object has been stored.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost</Declaration>
 			<Parameters>
@@ -617,13 +1010,42 @@ until the object has been stored.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:withCost:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/setObject:forKey:withCost:andDate:</TokenIdentifier>
+			<Abstract type="html">Stores an object in the cache for the specified key and the specified cost. If the cost causes the total
+to go over the costLimit the cache is trimmed (oldest objects first). This method blocks the calling thread
+until the object has been stored.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate *)date</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">An object to store in the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">A key to associate with the object. This string will be copied.</Abstract>
+				</Parameter><Parameter>
+					<Name>cost</Name>
+					<Abstract type="html">An amount to add to the totalCost.</Abstract>
+				</Parameter><Parameter>
+					<Name>date</Name>
+					<Abstract type="html">Access date to set on object</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setObject:forKey:withCost:andDate:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeObjectForKey:</TokenIdentifier>
 			<Abstract type="html">Removes the object for the specified key. This method blocks the calling thread until the object
 has been removed.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeObjectForKey:(NSString *)key</Declaration>
 			<Parameters>
@@ -634,13 +1056,14 @@ has been removed.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/removeObjectForKey:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/trimToDate:</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache that have not been used since the specified date.
 This method blocks the calling thread until the cache has been trimmed.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToDate:(NSDate *)date</Declaration>
 			<Parameters>
@@ -651,13 +1074,14 @@ This method blocks the calling thread until the cache has been trimmed.</Abstrac
 			</Parameters>
 			
 			<Anchor>//api/name/trimToDate:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/trimToCost:</TokenIdentifier>
 			<Abstract type="html">Removes objects from the cache, costliest objects first, until the totalCost is below the specified
 value. This method blocks the calling thread until the cache has been trimmed.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToCost:(NSUInteger)cost</Declaration>
 			<Parameters>
@@ -668,13 +1092,14 @@ value. This method blocks the calling thread until the cache has been trimmed.</
 			</Parameters>
 			
 			<Anchor>//api/name/trimToCost:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/trimToCostByDate:</TokenIdentifier>
 			<Abstract type="html">Removes objects from the cache, ordered by date (least recently used first), until the totalCost is below
 the specified value. This method blocks the calling thread until the cache has been trimmed.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToCostByDate:(NSUInteger)cost</Declaration>
 			<Parameters>
@@ -685,24 +1110,45 @@ the specified value. This method blocks the calling thread until the cache has b
 			</Parameters>
 			
 			<Anchor>//api/name/trimToCostByDate:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/trimToCountByDate:</TokenIdentifier>
+			<Abstract type="html">Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+is equal to the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+been trimmed.</Abstract>
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
+			
+			<Declaration>- (void)trimToCountByDate:(NSUInteger)objectsCount</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectsCount</Name>
+					<Abstract type="html">The cache will be trimmed equal to this size.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/trimToCountByDate:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/removeAllObjects</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache. This method blocks the calling thread until the cache has been cleared.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeAllObjects</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjects</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMMemoryCache/enumerateObjectsWithBlock:</TokenIdentifier>
 			<Abstract type="html">Loops through all objects in the cache within a memory barrier (reads and writes are suspended during the enumeration).
 This method blocks the calling thread until all objects have been enumerated.</Abstract>
-			<DeclaredIn>TMMemoryCache.h</DeclaredIn>			
+			<DeclaredIn>TMMemoryCache.h</DeclaredIn>
 			
 			<Declaration>- (void)enumerateObjectsWithBlock:(TMMemoryCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -713,7 +1159,9 @@ This method blocks the calling thread until all objects have been enumerated.</A
 			</Parameters>
 			
 			<Anchor>//api/name/enumerateObjectsWithBlock:</Anchor>
+            <NodeRef refid="3"/>
 		</Token>
 		
+        
 	</File>
 </Tokens>

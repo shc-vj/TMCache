@@ -19,26 +19,133 @@
 				</Node>
 				
 				
-				
+                
+                
 			</Subnodes>
         </Node>
     </TOC>
 	<Library>
 		
-		<Node id="1">
-			<Name>TMCache</Name>
-			<Path>Classes/TMCache.html</Path>
-		</Node>
-		<Node id="2">
-			<Name>TMDiskCache</Name>
-			<Path>Classes/TMDiskCache.html</Path>
-		</Node>
-		<Node id="3">
-			<Name>TMMemoryCache</Name>
-			<Path>Classes/TMMemoryCache.html</Path>
-		</Node>
+		<Node id="1" type="file" documentType="reference">
+            <Name>TMCache</Name>
+            <Path>Classes/TMCache.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/TMCache.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/TMCache.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/TMCache.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMCache.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMCache.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>TMDiskCache</Name>
+            <Path>Classes/TMDiskCache.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/TMDiskCache.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/TMDiskCache.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/TMDiskCache.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMDiskCache.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMDiskCache.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>TMMemoryCache</Name>
+            <Path>Classes/TMMemoryCache.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/TMMemoryCache.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/TMMemoryCache.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/TMMemoryCache.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMMemoryCache.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/TMMemoryCache.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
 		
 		
-		
+        
+        
 	</Library>
 </DocSetNodes>

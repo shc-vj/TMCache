@@ -28,7 +28,7 @@
 @class TMDiskCache;
 
 typedef void (^TMDiskCacheBlock)(TMDiskCache *cache);
-typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL);
+typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date);
 
 @interface TMDiskCache : NSObject
 
@@ -80,6 +80,31 @@ typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NS
  @warning Do not read this property on the <sharedQueue> (including asynchronous method blocks).
  */
 @property (assign) NSTimeInterval ageLimit;
+
+/**
+ The number of objects in the cache.
+ 
+ @warning This property is technically safe to access from any thread, but it reflects the value *right now*,
+ not taking into account any pending operations. In most cases this value should only be read from a block on the
+ <sharedQueue>, which will ensure its accuracy and prevent it from changing during the lifetime of the block.
+ */
+@property (readonly) NSUInteger objectsCount;
+
+/**
+ The maximum number of objects allowed on disk.
+ This value is checked every time an object is set, if the written objects count
+ size exceeds the limit a trim call is queued. Defaults to `0.0`, meaning no practical limit.
+ 
+ @warning Do not read this property on the <sharedQueue> (including asynchronous method blocks).
+ */
+@property (assign) NSUInteger countLimit;
+
+
+/**
+ When `YES` the cache will set access time on `objectForKey:block:`
+ Defaults to `YES`.
+ */
+@property (assign) BOOL updateObjectAccessDate;
 
 #pragma mark -
 /// @name Event Blocks
@@ -194,6 +219,17 @@ typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NS
  
  @param object An object to store in the cache.
  @param key A key to associate with the object. This string will be copied.
+ @param date	 Access date to set on object
+ @param block A block to be executed serially after the object has been stored, or nil.
+ */
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date block:(TMDiskCacheObjectBlock)block;
+
+/**
+ Stores an object in the cache for the specified key. This method returns immediately and executes the
+ passed block as soon as the object has been stored.
+ 
+ @param object An object to store in the cache.
+ @param key A key to associate with the object. This string will be copied.
  @param block A block to be executed serially after the object has been stored, or nil.
  */
 - (void)setObject:(id <NSCoding>)object forKey:(NSString *)key block:(TMDiskCacheObjectBlock)block;
@@ -227,13 +263,24 @@ typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NS
 
 /**
  Removes objects from the cache, ordered by date (least recently used first), until the cache is equal to or smaller
- than the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+ than the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
  been trimmed.
 
- @param byteCount The cache will be trimmed equal to or smaller than this size.
+ @param objectsCount The cache will be trimmed to hold equal to or smaller number of the objects to this count.
  @param block A block to be executed serially after the cache has been trimmed, or nil.
  */
-- (void)trimToSizeByDate:(NSUInteger)byteCount block:(TMDiskCacheBlock)block;
+- (void)trimToSizeByDate:(NSUInteger)objectsCount block:(TMDiskCacheBlock)block;
+
+/**
+ Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+ is equal to the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
+ been trimmed.
+ 
+ @param objectsCount The cache will be trimmed equal to this size.
+ @param block A block to be executed serially after the cache has been trimmed, or nil.
+ */
+- (void)trimToCountByDate:(NSUInteger)objectsCount block:(TMDiskCacheBlock)block;
+
 
 /**
  Removes all objects from the cache. This method returns immediately and executes the passed block as soon as the
@@ -281,6 +328,17 @@ typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NS
  Stores an object in the cache for the specified key. This method blocks the calling thread until
  the object has been stored.
  
+ @see setObject:forKey:withDate:block:
+ @param object An object to store in the cache.
+ @param key A key to associate with the object. This string will be copied.
+ @param date	 Access date to set on object
+ */
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date;
+
+/**
+ Stores an object in the cache for the specified key. This method blocks the calling thread until
+ the object has been stored.
+ 
  @see setObject:forKey:block:
  @param object An object to store in the cache.
  @param key A key to associate with the object. This string will be copied.
@@ -318,6 +376,16 @@ typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NS
  @param byteCount The cache will be trimmed equal to or smaller than this size.
  */
 - (void)trimToSizeByDate:(NSUInteger)byteCount;
+
+
+/**
+ Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+ is equal to the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+ been trimmed.
+ 
+ @param objectsCount The cache will be trimmed equal to this size.
+ */
+- (void)trimToCountByDate:(NSUInteger)objectsCount;
 
 /**
  Removes all objects from the cache. This method blocks the calling thread until the cache has been cleared.

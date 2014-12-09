@@ -1,4 +1,5 @@
 #import "TMCache.h"
+#import "WeakCompatibility.h"
 
 NSString * const TMCachePrefix = @"com.tumblr.TMCache";
 NSString * const TMCacheSharedName = @"TMCacheShared";
@@ -10,6 +11,9 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
 @property (assign, nonatomic) dispatch_queue_t queue;
 #endif
 @end
+
+
+
 
 @implementation TMCache
 
@@ -69,26 +73,28 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
     if (!key || !block)
         return;
 
-    __weak TMCache *weakSelf = self;
+    __WEAK TMCache *weakSelf = self;
 
     dispatch_async(_queue, ^{
         TMCache *strongSelf = weakSelf;
         if (!strongSelf)
             return;
 
-        __weak TMCache *weakSelf = strongSelf;
+        __WEAK TMCache *weakSelf = strongSelf;
         
-        [strongSelf->_memoryCache objectForKey:key block:^(TMMemoryCache *cache, NSString *key, id object) {
+        [strongSelf->_memoryCache objectForKey:key block:^(TMMemoryCache *cache, NSString *key, id object, NSDate *date) {
             TMCache *strongSelf = weakSelf;
             if (!strongSelf)
                 return;
             
             if (object) {
-                [strongSelf->_diskCache fileURLForKey:key block:^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL) {
-                    // update the access time on disk
-                }];
+				if( strongSelf->_diskCache.updateObjectAccessDate ) {
+					[strongSelf->_diskCache fileURLForKey:key block:^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date) {
+						// update the access time on disk
+					}];
+				}
 
-                __weak TMCache *weakSelf = strongSelf;
+                __WEAK TMCache *weakSelf = strongSelf;
                 
                 dispatch_async(strongSelf->_queue, ^{
                     TMCache *strongSelf = weakSelf;
@@ -96,16 +102,16 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
                         block(strongSelf, key, object);
                 });
             } else {
-                __weak TMCache *weakSelf = strongSelf;
+                __WEAK TMCache *weakSelf = strongSelf;
 
-                [strongSelf->_diskCache objectForKey:key block:^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL) {
+                [strongSelf->_diskCache objectForKey:key block:^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date) {
                     TMCache *strongSelf = weakSelf;
                     if (!strongSelf)
                         return;
                     
                     [strongSelf->_memoryCache setObject:object forKey:key block:nil];
                     
-                    __weak TMCache *weakSelf = strongSelf;
+                    __WEAK TMCache *weakSelf = strongSelf;
                     
                     dispatch_async(strongSelf->_queue, ^{
                         TMCache *strongSelf = weakSelf;
@@ -120,6 +126,11 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
 
 - (void)setObject:(id <NSCoding>)object forKey:(NSString *)key block:(TMCacheObjectBlock)block
 {
+	[self setObject:object forKey:key withDate:[NSDate new] block:block];
+}
+
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date block:(TMCacheObjectBlock)block
+{
     if (!key || !object)
         return;
 
@@ -132,20 +143,20 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
         dispatch_group_enter(group);
         dispatch_group_enter(group);
         
-        memBlock = ^(TMMemoryCache *cache, NSString *key, id object) {
+        memBlock = ^(TMMemoryCache *cache, NSString *key, id object, NSDate *date) {
             dispatch_group_leave(group);
         };
         
-        diskBlock = ^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL) {
+        diskBlock = ^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date) {
             dispatch_group_leave(group);
         };
     }
     
-    [_memoryCache setObject:object forKey:key block:memBlock];
-    [_diskCache setObject:object forKey:key block:diskBlock];
+    [_memoryCache setObject:object forKey:key withCost:0 andDate:date block:memBlock];
+    [_diskCache setObject:object forKey:key withDate:date block:diskBlock];
     
     if (group) {
-        __weak TMCache *weakSelf = self;
+        __WEAK TMCache *weakSelf = self;
         dispatch_group_notify(group, _queue, ^{
             TMCache *strongSelf = weakSelf;
             if (strongSelf)
@@ -172,11 +183,11 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
         dispatch_group_enter(group);
         dispatch_group_enter(group);
         
-        memBlock = ^(TMMemoryCache *cache, NSString *key, id object) {
+        memBlock = ^(TMMemoryCache *cache, NSString *key, id object, NSDate *date) {
             dispatch_group_leave(group);
         };
         
-        diskBlock = ^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL) {
+        diskBlock = ^(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date) {
             dispatch_group_leave(group);
         };
     }
@@ -185,7 +196,7 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
     [_diskCache removeObjectForKey:key block:diskBlock];
     
     if (group) {
-        __weak TMCache *weakSelf = self;
+        __WEAK TMCache *weakSelf = self;
         dispatch_group_notify(group, _queue, ^{
             TMCache *strongSelf = weakSelf;
             if (strongSelf)
@@ -222,7 +233,7 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
     [_diskCache removeAllObjects:diskBlock];
     
     if (group) {
-        __weak TMCache *weakSelf = self;
+        __WEAK TMCache *weakSelf = self;
         dispatch_group_notify(group, _queue, ^{
             TMCache *strongSelf = weakSelf;
             if (strongSelf)
@@ -262,7 +273,7 @@ NSString * const TMCacheSharedName = @"TMCacheShared";
     [_diskCache trimToDate:date block:diskBlock];
     
     if (group) {
-        __weak TMCache *weakSelf = self;
+        __WEAK TMCache *weakSelf = self;
         dispatch_group_notify(group, _queue, ^{
             TMCache *strongSelf = weakSelf;
             if (strongSelf)

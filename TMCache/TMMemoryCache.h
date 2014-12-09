@@ -20,7 +20,7 @@
 @class TMMemoryCache;
 
 typedef void (^TMMemoryCacheBlock)(TMMemoryCache *cache);
-typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id object);
+typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id object, NSDate *date);
 
 @interface TMMemoryCache : NSObject
 
@@ -51,6 +51,23 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
 @property (assign) NSTimeInterval ageLimit;
 
 /**
+ The number of objects in the cache.
+ 
+ @warning This property is technically safe to access from any thread, but it reflects the value *right now*,
+ not taking into account any pending operations. In most cases this value should only be read from a block on the
+ <sharedQueue>, which will ensure its accuracy and prevent it from changing during the lifetime of the block.
+ */
+@property (readonly) NSUInteger objectsCount;
+
+/**
+ The maximum number of objects allowed in cache.
+ This value is checked every time an object is set, if the written objects count
+ size exceeds the limit a trim call is queued. Defaults to `0.0`, meaning no practical limit.
+ 
+ @warning Do not read this property on the <sharedQueue> (including asynchronous method blocks).
+ */
+@property (assign) NSUInteger countLimit;
+/**
  When `YES` on iOS the cache will remove all objects when the app receives a memory warning.
  Defaults to `YES`.
  */
@@ -61,6 +78,12 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
  Defaults to `YES`.
  */
 @property (assign) BOOL removeAllObjectsOnEnteringBackground;
+
+/**
+ When `YES` the cache will set access time on `objectForKey:block:`
+ Defaults to `YES`.
+ */
+@property (assign) BOOL updateObjectAccessDate;
 
 #pragma mark -
 /// @name Event Blocks
@@ -159,6 +182,20 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
 - (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost block:(TMMemoryCacheObjectBlock)block;
 
 /**
+ Stores an object in the cache for the specified key and the specified cost. If the cost causes the total
+ to go over the <costLimit> the cache is trimmed (oldest objects first). This method returns immediately
+ and executes the passed block after the object has been stored, potentially in parallel with other blocks
+ on the <queue>.
+ 
+ @param object An object to store in the cache.
+ @param key A key to associate with the object. This string will be copied.
+ @param cost An amount to add to the <totalCost>.
+ @param date	 Access date to set on object
+ @param block A block to be executed concurrently after the object has been stored, or nil.
+ */
+- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate*)date block:(TMMemoryCacheObjectBlock)block;
+
+/**
  Removes the object for the specified key. This method returns immediately and executes the passed
  block after the object has been removed, potentially in parallel with other blocks on the <queue>.
  
@@ -196,6 +233,17 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
  @param block A block to be executed concurrently after the cache has been trimmed, or nil.
  */
 - (void)trimToCostByDate:(NSUInteger)cost block:(TMMemoryCacheBlock)block;
+
+
+/**
+ Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+ is equal to the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
+ been trimmed.
+ 
+ @param objectsCount The cache will be trimmed equal to this size.
+ @param block A block to be executed serially after the cache has been trimmed, or nil.
+ */
+- (void)trimToCountByDate:(NSUInteger)objectsCount block:(TMMemoryCacheBlock)block;
 
 /**
  Removes all objects from the cache. This method returns immediately and executes the passed block after
@@ -249,6 +297,18 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
 - (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost;
 
 /**
+ Stores an object in the cache for the specified key and the specified cost. If the cost causes the total
+ to go over the <costLimit> the cache is trimmed (oldest objects first). This method blocks the calling thread
+ until the object has been stored.
+ 
+ @param object An object to store in the cache.
+ @param key A key to associate with the object. This string will be copied.
+ @param cost An amount to add to the <totalCost>.
+ @param date	 Access date to set on object
+ */
+- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate*)date;
+
+/**
  Removes the object for the specified key. This method blocks the calling thread until the object
  has been removed.
  
@@ -279,6 +339,16 @@ typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id
  @param cost The total accumulation allowed to remain after the cache has been trimmed.
  */
 - (void)trimToCostByDate:(NSUInteger)cost;
+
+/**
+ Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+ is equal to the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+ been trimmed.
+ 
+ @param objectsCount The cache will be trimmed equal to this size.
+ */
+- (void)trimToCountByDate:(NSUInteger)objectsCount;
+
 
 /**
  Removes all objects from the cache. This method blocks the calling thread until the cache has been cleared.

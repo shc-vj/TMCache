@@ -96,6 +96,18 @@ typedef void (^TMCacheObjectBlock)(TMCache *cache, NSString *key, id object);
  */
 - (void)objectForKey:(NSString *)key block:(TMCacheObjectBlock)block;
 
+
+/**
+ Stores an object in the cache for the specified key. This method returns immediately and executes the
+ passed block after the object has been stored, potentially in parallel with other blocks on the <queue>.
+ 
+ @param object An object to store in the cache.
+ @param key A key to associate with the object. This string will be copied.
+ @param date	Access date of object
+ @param block A block to be executed concurrently after the object has been stored, or nil.
+ */
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date block:(TMCacheObjectBlock)block;
+
 /**
  Stores an object in the cache for the specified key. This method returns immediately and executes the
  passed block after the object has been stored, potentially in parallel with other blocks on the <queue>.

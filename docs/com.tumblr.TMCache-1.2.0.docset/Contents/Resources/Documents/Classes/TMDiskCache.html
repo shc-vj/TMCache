@@ -4,10 +4,9 @@
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
 		<title>TMDiskCache Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 840)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -48,6 +47,8 @@
 	
 	<option value="//api/name/cacheURL">&nbsp;&nbsp;&nbsp;&nbsp;cacheURL</option>
 	
+	<option value="//api/name/countLimit">&nbsp;&nbsp;&nbsp;&nbsp;countLimit</option>
+	
 	<option value="//api/name/didAddObjectBlock">&nbsp;&nbsp;&nbsp;&nbsp;didAddObjectBlock</option>
 	
 	<option value="//api/name/didRemoveAllObjectsBlock">&nbsp;&nbsp;&nbsp;&nbsp;didRemoveAllObjectsBlock</option>
@@ -55,6 +56,10 @@
 	<option value="//api/name/didRemoveObjectBlock">&nbsp;&nbsp;&nbsp;&nbsp;didRemoveObjectBlock</option>
 	
 	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/objectsCount">&nbsp;&nbsp;&nbsp;&nbsp;objectsCount</option>
+	
+	<option value="//api/name/updateObjectAccessDate">&nbsp;&nbsp;&nbsp;&nbsp;updateObjectAccessDate</option>
 	
 	<option value="//api/name/willAddObjectBlock">&nbsp;&nbsp;&nbsp;&nbsp;willAddObjectBlock</option>
 	
@@ -66,6 +71,10 @@
 	
 	
 	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/emptyTrash">&nbsp;&nbsp;&nbsp;&nbsp;+ emptyTrash</option>
+	
+	<option value="//api/name/sharedCache">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedCache</option>
 	
 	<option value="//api/name/sharedQueue">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedQueue</option>
 	
@@ -84,6 +93,8 @@
 	
 	<option value="//api/name/initWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithName:</option>
 	
+	<option value="//api/name/initWithName:rootPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithName:rootPath:</option>
+	
 	<option value="//api/name/objectForKey:">&nbsp;&nbsp;&nbsp;&nbsp;- objectForKey:</option>
 	
 	<option value="//api/name/objectForKey:block:">&nbsp;&nbsp;&nbsp;&nbsp;- objectForKey:block:</option>
@@ -100,7 +111,13 @@
 	
 	<option value="//api/name/setObject:forKey:block:">&nbsp;&nbsp;&nbsp;&nbsp;- setObject:forKey:block:</option>
 	
-	<option value="//api/name/sharedCache">&nbsp;&nbsp;&nbsp;&nbsp;- sharedCache</option>
+	<option value="//api/name/setObject:forKey:withDate:">&nbsp;&nbsp;&nbsp;&nbsp;- setObject:forKey:withDate:</option>
+	
+	<option value="//api/name/setObject:forKey:withDate:block:">&nbsp;&nbsp;&nbsp;&nbsp;- setObject:forKey:withDate:block:</option>
+	
+	<option value="//api/name/trimToCountByDate:">&nbsp;&nbsp;&nbsp;&nbsp;- trimToCountByDate:</option>
+	
+	<option value="//api/name/trimToCountByDate:block:">&nbsp;&nbsp;&nbsp;&nbsp;- trimToCountByDate:block:</option>
 	
 	<option value="//api/name/trimToDate:">&nbsp;&nbsp;&nbsp;&nbsp;- trimToDate:</option>
 	
@@ -156,6 +173,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheURL">cacheURL</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/countLimit">countLimit</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didAddObjectBlock">didAddObjectBlock</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didRemoveAllObjectsBlock">didRemoveAllObjectsBlock</a></span></li>
@@ -163,6 +182,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didRemoveObjectBlock">didRemoveObjectBlock</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectsCount">objectsCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateObjectAccessDate">updateObjectAccessDate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/willAddObjectBlock">willAddObjectBlock</a></span></li>
 	
@@ -175,6 +198,10 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/emptyTrash">emptyTrash</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedCache">sharedCache</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedQueue">sharedQueue</a></span></li>
 	
@@ -194,6 +221,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithName:">initWithName:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithName:rootPath:">initWithName:rootPath:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectForKey:">objectForKey:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectForKey:block:">objectForKey:block:</a></span></li>
@@ -210,7 +239,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObject:forKey:block:">setObject:forKey:block:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedCache">sharedCache</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObject:forKey:withDate:">setObject:forKey:withDate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObject:forKey:withDate:block:">setObject:forKey:withDate:block:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trimToCountByDate:">trimToCountByDate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trimToCountByDate:block:">trimToCountByDate:block:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trimToDate:">trimToDate:</a></span></li>
 	
@@ -255,8 +290,8 @@
 </tr>
 						</tbody></table></div>
 					
-					
-					
+                    
+                    
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
@@ -301,38 +336,48 @@ by itself, as it adds a fast layer of additional memory caching while still writ
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
-		<span class="tooltip"><p>The name of this cache, used to create a directory under Library/Caches and also appearing in stack traces.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cacheURL">&nbsp;&nbsp;cacheURL</a></code>
-		<span class="tooltip"><p>The URL of the directory used by this cache, usually <code>Library/Caches/com.tumblr.TMDiskCache.(name)</code></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/byteCount">&nbsp;&nbsp;byteCount</a></code>
-		<span class="tooltip"><p>The total number of bytes used on disk, as reported by <code>NSURLTotalFileAllocatedSizeKey</code>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/byteLimit">&nbsp;&nbsp;byteLimit</a></code>
-		<span class="tooltip"><p>The maximum number of bytes allowed on disk. This value is checked every time an object is set, if the written
-size exceeds the limit a trim call is queued. Defaults to <code>0.0</code>, meaning no practical limit.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/ageLimit">&nbsp;&nbsp;ageLimit</a></code>
-		<span class="tooltip"><p>The maximum number of seconds an object is allowed to exist in the cache. Setting this to a value
-greater than <code>0.0</code> will start a recurring GCD timer with the same period that calls <a href="#//api/name/trimToDate:">trimToDate:</a>.
-Setting it back to <code>0.0</code> will stop the timer. Defaults to <code>0.0</code>, meaning no limit.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsCount">&nbsp;&nbsp;objectsCount</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/countLimit">&nbsp;&nbsp;countLimit</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateObjectAccessDate">&nbsp;&nbsp;updateObjectAccessDate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -347,44 +392,36 @@ Setting it back to <code>0.0</code> will stop the timer. Defaults to <code>0.0</
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/willAddObjectBlock">&nbsp;&nbsp;willAddObjectBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just before an object is added to the cache. The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/willRemoveObjectBlock">&nbsp;&nbsp;willRemoveObjectBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just before an object is removed from the cache. The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/willRemoveAllObjectsBlock">&nbsp;&nbsp;willRemoveAllObjectsBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just before all objects are removed from the cache as a result of <a href="#//api/name/removeAllObjects:">removeAllObjects:</a>.
-The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/didAddObjectBlock">&nbsp;&nbsp;didAddObjectBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just after an object is added to the cache. The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/didRemoveObjectBlock">&nbsp;&nbsp;didRemoveObjectBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just after an object is removed from the cache. The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/didRemoveAllObjectsBlock">&nbsp;&nbsp;didRemoveAllObjectsBlock</a></code>
-		<span class="tooltip"><p>A block to be executed just after all objects are removed from the cache as a result of <a href="#//api/name/removeAllObjects:">removeAllObjects:</a>.
-The queue waits during execution.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -398,24 +435,31 @@ The queue waits during execution.</p></span>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sharedCache">&ndash;&nbsp;sharedCache</a></code>
-		<span class="tooltip"><p>A shared cache.</p></span>
+		<code><a href="#//api/name/sharedCache">+&nbsp;sharedCache</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sharedQueue">+&nbsp;sharedQueue</a></code>
-		<span class="tooltip"><p>A shared serial queue, used by all instances of this class. Use <code>dispatch_set_target_queue</code> to integrate
-this queue with an exisiting serial I/O queue.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/emptyTrash">+&nbsp;emptyTrash</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithName:">&ndash;&nbsp;initWithName:</a></code>
-		<span class="tooltip"><p>The designated initializer. Multiple instances with the same name are allowed and can safely access
-the same data on disk thanks to the magic of seriality.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithName:rootPath:">&ndash;&nbsp;initWithName:rootPath:</a></code>
 	</span>
 	
 	
@@ -430,75 +474,66 @@ the same data on disk thanks to the magic of seriality.</p></span>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/objectForKey:block:">&ndash;&nbsp;objectForKey:block:</a></code>
-		<span class="tooltip"><p>Retrieves the object for the specified key. This method returns immediately and executes the passed
-block as soon as the object is available on the serial <a href="#//api/name/sharedQueue">sharedQueue</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fileURLForKey:block:">&ndash;&nbsp;fileURLForKey:block:</a></code>
-		<span class="tooltip"><p>Retrieves the fileURL for the specified key without actually reading the data from disk. This method
-returns immediately and executes the passed block as soon as the object is available on the serial
-<a href="#//api/name/sharedQueue">sharedQueue</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObject:forKey:withDate:block:">&ndash;&nbsp;setObject:forKey:withDate:block:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setObject:forKey:block:">&ndash;&nbsp;setObject:forKey:block:</a></code>
-		<span class="tooltip"><p>Stores an object in the cache for the specified key. This method returns immediately and executes the
-passed block as soon as the object has been stored.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeObjectForKey:block:">&ndash;&nbsp;removeObjectForKey:block:</a></code>
-		<span class="tooltip"><p>Removes the object for the specified key. This method returns immediately and executes the passed block
-as soon as the object has been removed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToDate:block:">&ndash;&nbsp;trimToDate:block:</a></code>
-		<span class="tooltip"><p>Removes all objects from the cache that have not been used since the specified date.
-This method returns immediately and executes the passed block as soon as the cache has been trimmed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToSize:block:">&ndash;&nbsp;trimToSize:block:</a></code>
-		<span class="tooltip"><p>Removes objects from the cache, largest first, until the cache is equal to or smaller than the specified byteCount.
-This method returns immediately and executes the passed block as soon as the cache has been trimmed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToSizeByDate:block:">&ndash;&nbsp;trimToSizeByDate:block:</a></code>
-		<span class="tooltip"><p>Removes objects from the cache, ordered by date (least recently used first), until the cache is equal to or smaller
-than the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
-been trimmed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trimToCountByDate:block:">&ndash;&nbsp;trimToCountByDate:block:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeAllObjects:">&ndash;&nbsp;removeAllObjects:</a></code>
-		<span class="tooltip"><p>Removes all objects from the cache. This method returns immediately and executes the passed block as soon as the
-cache has been cleared.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/enumerateObjectsWithBlock:completionBlock:">&ndash;&nbsp;enumerateObjectsWithBlock:completionBlock:</a></code>
-		<span class="tooltip"><p>Loops through all objects in the cache (reads and writes are suspended during the enumeration). Data is not actually
-read from disk, the <code>object</code> parameter of the block will be <code>nil</code> but the <code>fileURL</code> will be available.
-This method returns immediately.</p></span>
 	</span>
 	
 	
@@ -513,73 +548,66 @@ This method returns immediately.</p></span>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/objectForKey:">&ndash;&nbsp;objectForKey:</a></code>
-		<span class="tooltip"><p>Retrieves the object for the specified key. This method blocks the calling thread until the
-object is available.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fileURLForKey:">&ndash;&nbsp;fileURLForKey:</a></code>
-		<span class="tooltip"><p>Retrieves the file URL for the specified key. This method blocks the calling thread until the
-url is available. Do not use this URL anywhere but on the <a href="#//api/name/sharedQueue">sharedQueue</a>. This method probably
-shouldn&rsquo;t even exist, just use the asynchronous one.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObject:forKey:withDate:">&ndash;&nbsp;setObject:forKey:withDate:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setObject:forKey:">&ndash;&nbsp;setObject:forKey:</a></code>
-		<span class="tooltip"><p>Stores an object in the cache for the specified key. This method blocks the calling thread until
-the object has been stored.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeObjectForKey:">&ndash;&nbsp;removeObjectForKey:</a></code>
-		<span class="tooltip"><p>Removes the object for the specified key. This method blocks the calling thread until the object
-has been removed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToDate:">&ndash;&nbsp;trimToDate:</a></code>
-		<span class="tooltip"><p>Removes all objects from the cache that have not been used since the specified date.
-This method blocks the calling thread until the cache has been trimmed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToSize:">&ndash;&nbsp;trimToSize:</a></code>
-		<span class="tooltip"><p>Removes objects from the cache, largest first, until the cache is equal to or smaller than the
-specified byteCount. This method blocks the calling thread until the cache has been trimmed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/trimToSizeByDate:">&ndash;&nbsp;trimToSizeByDate:</a></code>
-		<span class="tooltip"><p>Removes objects from the cache, ordered by date (least recently used first), until the cache is equal to or
-smaller than the specified byteCount. This method blocks the calling thread until the cache has been trimmed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trimToCountByDate:">&ndash;&nbsp;trimToCountByDate:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeAllObjects">&ndash;&nbsp;removeAllObjects</a></code>
-		<span class="tooltip"><p>Removes all objects from the cache. This method blocks the calling thread until the cache has been cleared.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/enumerateObjectsWithBlock:">&ndash;&nbsp;enumerateObjectsWithBlock:</a></code>
-		<span class="tooltip"><p>Loops through all objects in the cache (reads and writes are suspended during the enumeration). Data is not actually
-read from disk, the <code>object</code> parameter of the block will be <code>nil</code> but the <code>fileURL</code> will be available.
-This method blocks the calling thread until all objects have been enumerated.</p></span>
 	</span>
 	
 	
@@ -775,6 +803,49 @@ size exceeds the limit a trim call is queued. Defaults to <code>0.0</code>, mean
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/countLimit" title="countLimit"></a>
+	<h3 class="subsubtitle method-title">countLimit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The maximum number of objects allowed on disk.
+This value is checked every time an object is set, if the written objects count
+size exceeds the limit a trim call is queued. Defaults to <code>0.0</code>, meaning no practical limit.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (assign) NSUInteger countLimit</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Do not read this property on the <a href="#//api/name/sharedQueue">sharedQueue</a> (including asynchronous method blocks).</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/didAddObjectBlock" title="didAddObjectBlock"></a>
 	<h3 class="subsubtitle method-title">didAddObjectBlock</h3>
 	
@@ -920,6 +991,86 @@ The queue waits during execution.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/objectsCount" title="objectsCount"></a>
+	<h3 class="subsubtitle method-title">objectsCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of objects in the cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSUInteger objectsCount</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This property is technically safe to access from any thread, but it reflects the value <em>right now</em>,
+not taking into account any pending operations. In most cases this value should only be read from a block on the
+<a href="#//api/name/sharedQueue">sharedQueue</a>, which will ensure its accuracy and prevent it from changing during the lifetime of the block.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateObjectAccessDate" title="updateObjectAccessDate"></a>
+	<h3 class="subsubtitle method-title">updateObjectAccessDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>When <code>YES</code> the cache will set access time on <code>objectForKey:block:</code>
+Defaults to <code>YES</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (assign) BOOL updateObjectAccessDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/willAddObjectBlock" title="willAddObjectBlock"></a>
 	<h3 class="subsubtitle method-title">willAddObjectBlock</h3>
 	
@@ -1035,6 +1186,83 @@ The queue waits during execution.</p>
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/emptyTrash" title="emptyTrash"></a>
+	<h3 class="subsubtitle method-title">emptyTrash</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Empties the trash with <code>DISPATCH_QUEUE_PRIORITY_BACKGROUND</code>. Does not block the <a href="#//api/name/sharedQueue">sharedQueue</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)emptyTrash</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedCache" title="sharedCache"></a>
+	<h3 class="subsubtitle method-title">sharedCache</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A shared cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedCache</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The shared singleton cache instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/sharedQueue" title="sharedQueue"></a>
@@ -1240,7 +1468,7 @@ shouldn&rsquo;t even exist, just use the asynchronous one.</p>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/fileURLForKey:block:">&ndash; fileURLForKey:block:</a></p></code></li>
+			<li><code><p><a href="#//api/name/fileURLForKey:block:">- fileURLForKey:block:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1321,7 +1549,7 @@ access this fileURL after the block has ended. Do all work on the <a href="#//ap
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The designated initializer. Multiple instances with the same name are allowed and can safely access
+		<p>Multiple instances with the same name are allowed and can safely access
 the same data on disk thanks to the magic of seriality.</p>
 	</div>		
 	
@@ -1337,6 +1565,72 @@ the same data on disk thanks to the magic of seriality.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>name</em></dt>
 			<dd><p>The name of the cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new cache with the specified name.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/name">@property name</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithName:rootPath:" title="initWithName:rootPath:"></a>
+	<h3 class="subsubtitle method-title">initWithName:rootPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The designated initializer. Multiple instances with the same name are allowed and can safely access
+the same data on disk thanks to the magic of seriality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithName:(NSString *)<em>name</em> rootPath:(NSString *)<em>rootPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the cache.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rootPath</em></dt>
+			<dd><p>The path of the cache.</p></dd>
 		</dl>
 		
 	</div>
@@ -1421,7 +1715,7 @@ object is available.</p>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/objectForKey:block:">&ndash; objectForKey:block:</a></p></code></li>
+			<li><code><p><a href="#//api/name/objectForKey:block:">- objectForKey:block:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1721,7 +2015,7 @@ the object has been stored.</p>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/setObject:forKey:block:">&ndash; setObject:forKey:block:</a></p></code></li>
+			<li><code><p><a href="#//api/name/setObject:forKey:block:">- setObject:forKey:block:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1794,27 +2088,215 @@ passed block as soon as the object has been stored.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/sharedCache" title="sharedCache"></a>
-	<h3 class="subsubtitle method-title">sharedCache</h3>
+	<a name="//api/name/setObject:forKey:withDate:" title="setObject:forKey:withDate:"></a>
+	<h3 class="subsubtitle method-title">setObject:forKey:withDate:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A shared cache.</p>
+		<p>Stores an object in the cache for the specified key. This method blocks the calling thread until
+the object has been stored.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)sharedCache</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setObject:(id&lt;NSCoding&gt;)<em>object</em> forKey:(NSString *)<em>key</em> withDate:(NSDate *)<em>date</em></code></div>
 
     
 	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The shared singleton cache instance.</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>An object to store in the cache.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>A key to associate with the object. This string will be copied.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Access date to set on object</p></dd>
+		</dl>
+		
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setObject:forKey:withDate:block:">- setObject:forKey:withDate:block:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setObject:forKey:withDate:block:" title="setObject:forKey:withDate:block:"></a>
+	<h3 class="subsubtitle method-title">setObject:forKey:withDate:block:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stores an object in the cache for the specified key. This method returns immediately and executes the
+passed block as soon as the object has been stored.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setObject:(id&lt;NSCoding&gt;)<em>object</em> forKey:(NSString *)<em>key</em> withDate:(NSDate *)<em>date</em> block:(TMDiskCacheObjectBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>An object to store in the cache.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>A key to associate with the object. This string will be copied.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Access date to set on object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block to be executed serially after the object has been stored, or nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trimToCountByDate:" title="trimToCountByDate:"></a>
+	<h3 class="subsubtitle method-title">trimToCountByDate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+is equal to the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+been trimmed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)trimToCountByDate:(NSUInteger)<em>objectsCount</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectsCount</em></dt>
+			<dd><p>The cache will be trimmed equal to this size.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TMDiskCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trimToCountByDate:block:" title="trimToCountByDate:block:"></a>
+	<h3 class="subsubtitle method-title">trimToCountByDate:block:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes objects from the cache, ordered by date (least recently used first), until the number of objects in cache
+is equal to the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
+been trimmed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)trimToCountByDate:(NSUInteger)<em>objectsCount</em> block:(TMDiskCacheBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectsCount</em></dt>
+			<dd><p>The cache will be trimmed equal to this size.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block to be executed serially after the cache has been trimmed, or nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
 	
 	
 	
@@ -2087,13 +2569,13 @@ smaller than the specified byteCount. This method blocks the calling thread unti
 	
 	<div class="method-subsection brief-description">
 		<p>Removes objects from the cache, ordered by date (least recently used first), until the cache is equal to or smaller
-than the specified byteCount. This method returns immediately and executes the passed block as soon as the cache has
+than the specified objectsCount. This method returns immediately and executes the passed block as soon as the cache has
 been trimmed.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)trimToSizeByDate:(NSUInteger)<em>byteCount</em> block:(TMDiskCacheBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)trimToSizeByDate:(NSUInteger)<em>objectsCount</em> block:(TMDiskCacheBlock)<em>block</em></code></div>
 
     
 	
@@ -2101,8 +2583,8 @@ been trimmed.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>byteCount</em></dt>
-			<dd><p>The cache will be trimmed equal to or smaller than this size.</p></dd>
+			<dt><em>objectsCount</em></dt>
+			<dd><p>The cache will be trimmed to hold equal to or smaller number of the objects to this count.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -2135,6 +2617,8 @@ been trimmed.</p>
 					</div>
 					
 					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -2145,9 +2629,9 @@ been trimmed.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Tumblr. All rights reserved. (Last updated: 2013-05-24)</span><br />
+						<p><span class="copyright">&copy; 2014 Tumblr. All rights reserved. (Last updated: 2014-12-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>

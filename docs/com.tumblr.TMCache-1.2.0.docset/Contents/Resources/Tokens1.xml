@@ -8,6 +8,7 @@
 reproduce, such as downloaded data or the results of slow processing. It is comprised of two self-similar
 stores, one in memory (TMMemoryCache and one on disk (TMDiskCache.</Abstract>
 			<DeclaredIn>TMCache.h</DeclaredIn>
+            
 			
 			<NodeRef refid="1"/>
 		</Token>
@@ -16,129 +17,200 @@ stores, one in memory (TMMemoryCache and one on disk (TMDiskCache.</Abstract>
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setName:</TokenIdentifier>
 			<Abstract type="html">The name of this cache, used to create the diskCache and also appearing in stack traces.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSString *name</Declaration>
 			
 			
 			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/name</TokenIdentifier>
+			<Abstract type="html">The name of this cache, used to create the diskCache and also appearing in stack traces.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMCache/name</TokenIdentifier>
 			<Abstract type="html">The name of this cache, used to create the diskCache and also appearing in stack traces.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSString *name</Declaration>
 			
 			
 			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setQueue:</TokenIdentifier>
 			<Abstract type="html">A concurrent queue on which blocks passed to the asynchronous access methods are run.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
 			
 			
 			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/queue</TokenIdentifier>
+			<Abstract type="html">A concurrent queue on which blocks passed to the asynchronous access methods are run.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
+			
+			
+			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMCache/queue</TokenIdentifier>
 			<Abstract type="html">A concurrent queue on which blocks passed to the asynchronous access methods are run.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) dispatch_queue_t queue</Declaration>
 			
 			
 			<Anchor>//api/name/queue</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setDiskByteCount:</TokenIdentifier>
 			<Abstract type="html">Synchronously retrieves the total byte count of the diskCache on the shared disk queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSUInteger diskByteCount</Declaration>
 			
 			
 			<Anchor>//api/name/diskByteCount</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/diskByteCount</TokenIdentifier>
+			<Abstract type="html">Synchronously retrieves the total byte count of the diskCache on the shared disk queue.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSUInteger diskByteCount</Declaration>
+			
+			
+			<Anchor>//api/name/diskByteCount</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMCache/diskByteCount</TokenIdentifier>
 			<Abstract type="html">Synchronously retrieves the total byte count of the diskCache on the shared disk queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) NSUInteger diskByteCount</Declaration>
 			
 			
 			<Anchor>//api/name/diskByteCount</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setDiskCache:</TokenIdentifier>
 			<Abstract type="html">The underlying disk cache, see TMDiskCache for additional configuration and trimming options.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) TMDiskCache *diskCache</Declaration>
 			
 			
 			<Anchor>//api/name/diskCache</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/diskCache</TokenIdentifier>
+			<Abstract type="html">The underlying disk cache, see TMDiskCache for additional configuration and trimming options.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) TMDiskCache *diskCache</Declaration>
+			
+			
+			<Anchor>//api/name/diskCache</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMCache/diskCache</TokenIdentifier>
 			<Abstract type="html">The underlying disk cache, see TMDiskCache for additional configuration and trimming options.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) TMDiskCache *diskCache</Declaration>
 			
 			
 			<Anchor>//api/name/diskCache</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setMemoryCache:</TokenIdentifier>
 			<Abstract type="html">The underlying memory cache, see TMMemoryCache for additional configuration and trimming options.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) TMMemoryCache *memoryCache</Declaration>
 			
 			
 			<Anchor>//api/name/memoryCache</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/memoryCache</TokenIdentifier>
+			<Abstract type="html">The underlying memory cache, see TMMemoryCache for additional configuration and trimming options.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) TMMemoryCache *memoryCache</Declaration>
+			
+			
+			<Anchor>//api/name/memoryCache</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TMCache/memoryCache</TokenIdentifier>
 			<Abstract type="html">The underlying memory cache, see TMMemoryCache for additional configuration and trimming options.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>@property (readonly) TMMemoryCache *memoryCache</Declaration>
 			
 			
 			<Anchor>//api/name/memoryCache</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TMCache/sharedCache</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/TMCache/sharedCache</TokenIdentifier>
 			<Abstract type="html">A shared cache.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)sharedCache</Declaration>
+			<Declaration>+ (instancetype)sharedCache</Declaration>
 			
 			<ReturnValue><Abstract type="html">The shared singleton cache instance.</Abstract></ReturnValue>
 			<Anchor>//api/name/sharedCache</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/initWithName:</TokenIdentifier>
-			<Abstract type="html">The designated initializer. Multiple instances with the same name are allowed and can safely access
+			<Abstract type="html">Multiple instances with the same name are allowed and can safely access
 the same data on disk thanks to the magic of seriality. Also used to create the diskCache.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 	<RelatedTokens>
 		<TokenIdentifier>//apple_ref/occ/instp/TMCache/name</TokenIdentifier>
@@ -154,13 +226,40 @@ the same data on disk thanks to the magic of seriality. Also used to create the 
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new cache with the specified name.</Abstract></ReturnValue>
 			<Anchor>//api/name/initWithName:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/initWithName:rootPath:</TokenIdentifier>
+			<Abstract type="html">The designated initializer. Multiple instances with the same name are allowed and can safely access
+the same data on disk thanks to the magic of seriality. Also used to create the diskCache.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/TMCache/name</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (instancetype)initWithName:(NSString *)name rootPath:(NSString *)rootPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>rootPath</Name>
+					<Abstract type="html">The path of the cache on disk.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new cache with the specified name.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithName:rootPath:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/objectForKey:block:</TokenIdentifier>
 			<Abstract type="html">Retrieves the object for the specified key. This method returns immediately and executes the passed
 block after the object is available, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)objectForKey:(NSString *)key block:(TMCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -174,13 +273,41 @@ block after the object is available, potentially in parallel with other blocks o
 			</Parameters>
 			
 			<Anchor>//api/name/objectForKey:block:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setObject:forKey:withDate:block:</TokenIdentifier>
+			<Abstract type="html">Stores an object in the cache for the specified key. This method returns immediately and executes the
+passed block after the object has been stored, potentially in parallel with other blocks on the queue.</Abstract>
+			<DeclaredIn>TMCache.h</DeclaredIn>
+			
+			<Declaration>- (void)setObject:(id&lt;NSCoding&gt;)object forKey:(NSString *)key withDate:(NSDate *)date block:(TMCacheObjectBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">An object to store in the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">A key to associate with the object. This string will be copied.</Abstract>
+				</Parameter><Parameter>
+					<Name>date</Name>
+					<Abstract type="html">Access date of object</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block to be executed concurrently after the object has been stored, or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setObject:forKey:withDate:block:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setObject:forKey:block:</TokenIdentifier>
 			<Abstract type="html">Stores an object in the cache for the specified key. This method returns immediately and executes the
 passed block after the object has been stored, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)setObject:(id&lt;NSCoding&gt;)object forKey:(NSString *)key block:(TMCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -197,13 +324,14 @@ passed block after the object has been stored, potentially in parallel with othe
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:block:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/removeObjectForKey:block:</TokenIdentifier>
 			<Abstract type="html">Removes the object for the specified key. This method returns immediately and executes the passed
 block after the object has been removed, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeObjectForKey:(NSString *)key block:(TMCacheObjectBlock)block</Declaration>
 			<Parameters>
@@ -217,13 +345,14 @@ block after the object has been removed, potentially in parallel with other bloc
 			</Parameters>
 			
 			<Anchor>//api/name/removeObjectForKey:block:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/trimToDate:block:</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache that have not been used since the specified date. This method returns immediately and
 executes the passed block after the cache has been trimmed, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToDate:(NSDate *)date block:(TMCacheBlock)block</Declaration>
 			<Parameters>
@@ -237,13 +366,14 @@ executes the passed block after the cache has been trimmed, potentially in paral
 			</Parameters>
 			
 			<Anchor>//api/name/trimToDate:block:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/removeAllObjects:</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache.This method returns immediately and executes the passed block after the
 cache has been cleared, potentially in parallel with other blocks on the queue.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeAllObjects:(TMCacheBlock)block</Declaration>
 			<Parameters>
@@ -254,12 +384,13 @@ cache has been cleared, potentially in parallel with other blocks on the queue.<
 			</Parameters>
 			
 			<Anchor>//api/name/removeAllObjects:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/objectForKey:</TokenIdentifier>
 			<Abstract type="html">Retrieves the object for the specified key. This method blocks the calling thread until the object is available.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 	<RelatedTokens>
 		<TokenIdentifier>//apple_ref/occ/instm/TMCache/objectForKey:block:</TokenIdentifier>
@@ -275,12 +406,13 @@ cache has been cleared, potentially in parallel with other blocks on the queue.<
 			</Parameters>
 			<ReturnValue><Abstract type="html">The object for the specified key.</Abstract></ReturnValue>
 			<Anchor>//api/name/objectForKey:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/setObject:forKey:</TokenIdentifier>
 			<Abstract type="html">Stores an object in the cache for the specified key. This method blocks the calling thread until the object has been set.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 	<RelatedTokens>
 		<TokenIdentifier>//apple_ref/occ/instm/TMCache/setObject:forKey:block:</TokenIdentifier>
@@ -299,13 +431,14 @@ cache has been cleared, potentially in parallel with other blocks on the queue.<
 			</Parameters>
 			
 			<Anchor>//api/name/setObject:forKey:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/removeObjectForKey:</TokenIdentifier>
 			<Abstract type="html">Removes the object for the specified key. This method blocks the calling thread until the object
 has been removed.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeObjectForKey:(NSString *)key</Declaration>
 			<Parameters>
@@ -316,13 +449,14 @@ has been removed.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/removeObjectForKey:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/trimToDate:</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache that have not been used since the specified date.
 This method blocks the calling thread until the cache has been trimmed.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)trimToDate:(NSDate *)date</Declaration>
 			<Parameters>
@@ -333,18 +467,21 @@ This method blocks the calling thread until the cache has been trimmed.</Abstrac
 			</Parameters>
 			
 			<Anchor>//api/name/trimToDate:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TMCache/removeAllObjects</TokenIdentifier>
 			<Abstract type="html">Removes all objects from the cache. This method blocks the calling thread until the cache has been cleared.</Abstract>
-			<DeclaredIn>TMCache.h</DeclaredIn>			
+			<DeclaredIn>TMCache.h</DeclaredIn>
 			
 			<Declaration>- (void)removeAllObjects</Declaration>
 			
 			
 			<Anchor>//api/name/removeAllObjects</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
+        
 	</File>
 </Tokens>
