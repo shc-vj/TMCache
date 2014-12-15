@@ -1,4 +1,49 @@
-# TMCache #
+TMCache
+=========
+
+It's fork of [tumblr/TMCache](https://github.com/tumblr/TMCache) with support of limit cache usage by number of cached objects and adding cached objects with custom timestamp (original use current time of adding object to the cache).
+
+Custom timestamps are useful when you have objects with builtin own timestamps (like articles from RSS) and you want to limit number of objects in cache to by ex. 20 items.
+When the number objects limit is exceeded, first objects to remove are the oldest one.
+
+This fork is not merged with the main line of [tumblr/TMCache](https://github.com/tumblr/TMCache) because it needed to change definition of the `TMMemoryCacheObjectBlock` and `TMDiskCacheObjectBlock` to support timestamps parameters, so its no longer compatible with the original line :(
+
+## Usage specific to this fork
+
+### [TMCache](TMCache/TMCache.h)
+```objective-c
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date block:(TMCacheObjectBlock)block;
+```
+
+### [TMMemoryCache](TMCache/TMMemoryCache.h)
+```objective-c
+typedef void (^TMMemoryCacheObjectBlock)(TMMemoryCache *cache, NSString *key, id object, NSDate *date);
+
+@property (readonly) NSUInteger objectsCount;
+@property (assign) NSUInteger countLimit;
+
+- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate*)date block:(TMMemoryCacheObjectBlock)block;
+- (void)setObject:(id)object forKey:(NSString *)key withCost:(NSUInteger)cost andDate:(NSDate*)date;
+- (void)trimToCountByDate:(NSUInteger)objectsCount block:(TMMemoryCacheBlock)block;
+- (void)trimToCountByDate:(NSUInteger)objectsCount;
+```
+
+### [TMDiskCache](TMCache/TMDiskCache.h)
+```objective-c
+typedef void (^TMDiskCacheObjectBlock)(TMDiskCache *cache, NSString *key, id <NSCoding> object, NSURL *fileURL, NSDate *date);
+
+@property (readonly) NSUInteger objectsCount;
+@property (assign) NSUInteger countLimit;
+
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withDate:(NSDate*)date block:(TMDiskCacheObjectBlock)block;
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key;
+- (void)trimToCountByDate:(NSUInteger)objectsCount block:(TMDiskCacheBlock)block;
+- (void)trimToCountByDate:(NSUInteger)objectsCount;
+```
+
+
+
+# From original TMCache description
 
 ## Fast parallel object cache for iOS and OS X. ##
 
